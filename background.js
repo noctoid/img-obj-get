@@ -7,12 +7,11 @@
  */
 function getClickHandler() {
   return function(info, tab) {
-
     // The srcUrl property is only available for image elements.
-    var url = 'info.html#' + info.srcUrl;
-
+    var url = info.srcUrl;
+    alert(url);
     // Create a new window to the info page.
-    chrome.windows.create({ url: url, width: 700, height: 700 });
+    // chrome.windows.create({ url: url, width: 700, height: 700 });
   };
 };
 
@@ -22,6 +21,6 @@ function getClickHandler() {
 chrome.contextMenus.create({
   "title" : "Get image info",
   "type" : "normal",
-  "contexts" : ["image"],
+  "contexts" : ["all"],
   "onclick" : getClickHandler()
 });

@@ -1,5 +1,5 @@
 {
-  "name" : "QR Dealer",
+  "name" : "Bilibili Thumbnail Get",
   "version" : "0.1",
   "description" : "Get image info for images",
   "background" : { "scripts": ["background.js"] },
